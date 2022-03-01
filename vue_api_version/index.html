@@ -12,10 +12,25 @@
 </head>
 
 <body>
+	<header>
+	</header>
 	<div id="root">
-
+		<div v-if="albums.length" class="container">
+			<div class="album-card" v-for="album in albums">
+				<figure>
+					<img :src="album.poster" :alt="album.title" />
+					<figcaption>
+						<h3>{{ album.title }}</h3>
+						<p>{{ album.author }}</p>
+						<p>{{ album.year }}</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<h3 v-else>There's <em>nothing</em> here.</h3>
 	</div>
-	<script src="./script.js"></script>
+	<script src=" ./script.js">
+	</script>
 </body>
 
 </html>
